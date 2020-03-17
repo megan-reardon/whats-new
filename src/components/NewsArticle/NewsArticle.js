@@ -5,9 +5,9 @@ const NewsArticle = (props) => {
   return (
     <section className='news-article'>
       <img src={props.img} alt={props.headline}/>
-      <h2>{props.headline}</h2>
+      <h3>{props.headline}</h3>
       <p>{props.description}</p>
-      <a href={props.url}>Article</a>
+      <a href={props.url}>Link to article</a>
     </section>
   )
 }
