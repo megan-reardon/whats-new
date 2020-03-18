@@ -1,10 +1,14 @@
-.menu {
-  font-size: 2em;
-  color: white;
-}
-
 button {
   height: 3em;
-  width: 10em;
-  margin: .5em;
+  width: 9em;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.1em;
+  text-align: left;
+  border-radius: 0em 2em 2em 0em;
+}
+
+button:hover {
+  background: orange;
 }

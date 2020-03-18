@@ -19,7 +19,7 @@ class App extends Component {
         health: health,
         science: science,
         technology: technology,
-        selectCategory: 'technology'
+        selectCategory: 'science'
       }
     }
   };
@@ -38,7 +38,6 @@ class App extends Component {
   }
 
   render () {
-    {console.log(this.state.news[this.state.news.selectCategory])}
     return (
       <div className="app">
         <Menu filterCategory={this.filterCategory}/>
