@@ -1,0 +1,15 @@
+.news-article {
+  height: 27em;
+  width: 28em;
+  background: white;
+  margin: 1em;
+}
+
+img {
+  height: 16.5em;
+  width: 28em;
+}
+
+p, a {
+  font-size: .8em;
+}
