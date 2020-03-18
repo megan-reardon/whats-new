@@ -3,6 +3,9 @@
   width: 28em;
   background: white;
   margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -12,4 +15,20 @@ img {
 
 p, a {
   font-size: .8em;
+}
+
+.article-link {
+  background: purple;
+  color: white;
+  height: 2em;
+  text-align: left;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }

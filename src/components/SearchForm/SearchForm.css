@@ -1,0 +1,21 @@
+h2 {
+  color: white;
+}
+
+header {
+  display: flex;
+}
+
+.search-btn {
+  background: purple;
+  border-radius: 2em;
+  text-align: center;
+  height: 2em;
+  width: 8em;
+}
+
+input {
+  height: 3em;
+  width: 17em;
+  font-size: .8em;
+}

@@ -12,3 +12,11 @@ button {
 button:hover {
   background: orange;
 }
+
+h2 {
+  color: white;
+}
+
+button:focus {
+  background-color: orange;
+}
