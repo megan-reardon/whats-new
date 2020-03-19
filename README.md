@@ -6,6 +6,13 @@ This application was built with `create-react-app`. This app shows different new
 
 The purpose of this project was to begin learning the basics of React by creating a news app. This project uses both functional and class components, and tests both using React Testing Library and jest.
 
+### 2. Technology
+
+- React
+- JavaScript
+- React Testing Library
+- Jest
+
 ### Set Up
 
 Clone down this repo.
