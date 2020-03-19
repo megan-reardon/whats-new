@@ -12,10 +12,16 @@ header {
   text-align: center;
   height: 2em;
   width: 8em;
+  margin-top: 1em;
 }
 
 input {
   height: 3em;
   width: 17em;
   font-size: .8em;
+  margin: 1em 1em 0 0;
+}
+
+form {
+  height: 5em;
 }

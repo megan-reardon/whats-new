@@ -10,6 +10,7 @@ class SearchForm extends Component {
   }
 
   handleChange = (event) => {
+    event.preventDefault();
     this.setState({ search: event.target.value })
   }
 
@@ -24,7 +25,7 @@ class SearchForm extends Component {
           onChange={event => this.handleChange(event)}
         />
 
-        <button className='search-btn'>Search Now</button>
+        <button className='search-btn' type='button' onClick={() => this.props.filterNews(this.state.search)}>Search Now</button>
       </form>
     )
   }

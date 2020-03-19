@@ -26,25 +26,47 @@ class App extends Component {
   };
 
   filterCategory = (event) => {
-      this.setState({
-        news: {
-          local: local,
-          entertainment: entertainment,
-          health: health,
-          science: science,
-          technology: technology,
-          selectCategory: [event.target.id]
+    this.setState({
+      news: {
+        local: local,
+        entertainment: entertainment,
+        health: health,
+        science: science,
+        technology: technology,
+        selectCategory: [event.target.id]
+      }
+    })
+  }
+
+  filterNews = (searchedNews) => {
+    let filteredNews = [];
+    let allNews = [local, technology, health, science, entertainment];
+    allNews.forEach(category => {
+      category.forEach(article => {
+        if(article.headline.includes(searchedNews)) {
+          filteredNews.push(article)
         }
       })
+    })
+    this.setState({
+      news: {
+        local: local,
+        entertainment: entertainment,
+        health: health,
+        science: science,
+        technology: technology,
+        selectCategory: filteredNews
+      }
+    })
   }
 
   render () {
     return (
       <div className="app">
         <Menu filterCategory={this.filterCategory}/>
-        <SearchForm />
         <NewsContainer
          news={this.state.news[this.state.news.selectCategory]}/>
+         {/*<SearchForm filterNews={this.filterNews}/>*/}
       </div>
     );
   }

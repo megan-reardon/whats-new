@@ -1,6 +1,5 @@
 import React from 'react';
 import './Menu.css';
-{/*import health from '../images/health.svg';*/}
 
 const Menu = (props) => {
     return (
@@ -9,7 +8,6 @@ const Menu = (props) => {
         <nav>
           <button id='local'
             onClick={props.filterCategory}>
-            {/*<img src={health} />*/}
             Local News
             </button>
           <button id='entertainment' onClick={props.filterCategory}>Entertainment</button>
