@@ -20,7 +20,7 @@ class App extends Component {
         health: health,
         science: science,
         technology: technology,
-        selectCategory: science
+        selectCategory: local
       }
     }
   };
@@ -37,14 +37,14 @@ class App extends Component {
         selectCategory: chosenCategory
       }
     })
-  }
+  };
 
   filterNews = (searchedNews) => {
     let filteredNews = [];
     let allNews = [local, technology, health, science, entertainment];
     allNews.forEach(category => {
       category.forEach(article => {
-        if(article.headline.includes(searchedNews)) {
+        if (article.headline.toLowerCase().includes(searchedNews)) {
           filteredNews.push(article)
         }
       })
