@@ -20,12 +20,13 @@ class App extends Component {
         health: health,
         science: science,
         technology: technology,
-        selectCategory: 'science'
+        selectCategory: science
       }
     }
   };
 
   filterCategory = (event) => {
+    const chosenCategory = this.state.news[event.target.id]
     this.setState({
       news: {
         local: local,
@@ -33,7 +34,7 @@ class App extends Component {
         health: health,
         science: science,
         technology: technology,
-        selectCategory: [event.target.id]
+        selectCategory: chosenCategory
       }
     })
   }
@@ -65,8 +66,8 @@ class App extends Component {
       <div className="app">
         <Menu filterCategory={this.filterCategory}/>
         <NewsContainer
-         news={this.state.news[this.state.news.selectCategory]}/>
-         {/*<SearchForm filterNews={this.filterNews}/>*/}
+         news={this.state.news.selectCategory}/>
+         <SearchForm filterNews={this.filterNews}/>
       </div>
     );
   }
