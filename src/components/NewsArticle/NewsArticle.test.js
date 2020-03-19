@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 
 describe('NewsArticle', () => {
   it('renders text that we expect', () => {
-    const { getByText } = render(
+    const { getByText, getByAltText } = render(
       <NewsArticle
         headline={"Puppies Save the Day"}
         description={"Puppies are the best!"}
@@ -15,8 +15,10 @@ describe('NewsArticle', () => {
       const headlineEl = getByText("Puppies Save the Day");
       const descriptionEl = getByText("Puppies are the best!");
       const urlEl = getByText("Link to article");
+      const imageText = getByAltText("Puppies Save the Day")
       expect(headlineEl).toBeInTheDocument();
       expect(descriptionEl).toBeInTheDocument();
       expect(urlEl).toBeInTheDocument();
+      expect(imageText).toBeInTheDocument();
   });
 });
