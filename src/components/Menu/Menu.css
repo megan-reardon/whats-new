@@ -16,7 +16,7 @@ button:hover {
 
 h2 {
   color: orange;
-  margin: .5em 0 1em -1em;
+  margin: .5em 0 1em 0;
 }
 
 button:focus {

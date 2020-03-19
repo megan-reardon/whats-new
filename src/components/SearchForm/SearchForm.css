@@ -1,11 +1,3 @@
-h2 {
-  color: white;
-}
-
-header {
-  display: flex;
-}
-
 .search-btn {
   background: purple;
   border-radius: 2em;
@@ -24,4 +16,6 @@ input {
 
 form {
   height: 5em;
+  display: flex;
+  margin-right: 1em;
 }

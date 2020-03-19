@@ -20,12 +20,13 @@ class App extends Component {
         health: health,
         science: science,
         technology: technology,
-        selectCategory: 'science'
+        selectCategory: local
       }
     }
   };
 
   filterCategory = (event) => {
+    const chosenCategory = this.state.news[event.target.id]
     this.setState({
       news: {
         local: local,
@@ -33,17 +34,17 @@ class App extends Component {
         health: health,
         science: science,
         technology: technology,
-        selectCategory: [event.target.id]
+        selectCategory: chosenCategory
       }
     })
-  }
+  };
 
   filterNews = (searchedNews) => {
     let filteredNews = [];
     let allNews = [local, technology, health, science, entertainment];
     allNews.forEach(category => {
       category.forEach(article => {
-        if(article.headline.includes(searchedNews)) {
+        if (article.headline.toLowerCase().includes(searchedNews)) {
           filteredNews.push(article)
         }
       })
@@ -65,8 +66,8 @@ class App extends Component {
       <div className="app">
         <Menu filterCategory={this.filterCategory}/>
         <NewsContainer
-         news={this.state.news[this.state.news.selectCategory]}/>
-         {/*<SearchForm filterNews={this.filterNews}/>*/}
+         news={this.state.news.selectCategory}/>
+         <SearchForm filterNews={this.filterNews}/>
       </div>
     );
   }

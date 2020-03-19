@@ -3,7 +3,6 @@ import Menu from './Menu';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-//
 describe('Menu', () => {
   it('should render buttons', () => {
     const { getByText } = render(<Menu />)
@@ -19,7 +18,7 @@ describe('Menu', () => {
     expect(healthButtonEl).toBeInTheDocument();
     expect(scienceButtonEl).toBeInTheDocument();
     expect(technologyButtonEl).toBeInTheDocument();
-  });
+  })
 
   it('should call the filterCategory method on button click', () => {
     const mockFilterCategory = jest.fn();
@@ -35,4 +34,4 @@ describe('Menu', () => {
 
     expect(mockFilterCategory).toHaveBeenCalledTimes(5);
   })
-})
+});
